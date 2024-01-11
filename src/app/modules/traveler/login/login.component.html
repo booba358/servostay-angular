@@ -1,0 +1,85 @@
+<div id="toast-container" class="fixed top-4 end-4 z-50 w-64"></div>
+<div class="main signup">
+    <div class="container-fluid h-full">
+        <div class="login h-full">
+            <div class="grid grid-cols-12 h-full gap-y-8 md:gap-0">
+                <div class="col-span-12 md:col-span-6">
+                    <div class="login-left h-full flex flex-col justify-between
+              pt-8 md:pt-10 lg:pt-14 2xl:pt-16
+              px-6 sm:px-8 md:px-8 lg:px-10 xl:px-14 2xl:px-16
+              pb-6 md:mr-12 lg:mr-20 2xl:mr-24">
+                        <div class="">
+                            <img src="https://servostay.com/public/web-assets/images/login/login2.jpg" alt="logo"
+                                class="w-16 h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24 2xl:w-auto 2xl:h-auto">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 md:col-span-6">
+                    <div class="login-left h-full flex flex-col justify-between
+              pt-8 md:pt-10 lg:pt-14 2xl:pt-16
+              px-6 sm:px-8 md:px-8 lg:px-10 xl:px-14 2xl:px-16
+              pb-6 md:mr-12 lg:mr-20 2xl:mr-24">
+                        <div class="">
+
+
+                            <div
+                                class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+                                <form class="space-y-6" [formGroup]="signInForm" (ngSubmit)="onSubmittingForm()">
+                                    <h5 class="text-xl font-medium text-gray-900 dark:text-white">Sign in to our
+                                        platform</h5>
+                                    <div>
+                                        <label for="email"
+                                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
+                                            email</label>
+                                        <input type="email" [formControlName]="'email'" id="email"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                            placeholder="name@company.com">
+                                            <div class="pt-2 text-red-500 text-xs" *ngIf="formGet?.email?.errors && formGet?.email?.touched">
+                                                <p class="mt-2 text-sm text-red-600 dark:text-red-500" *ngIf="formGet?.email?.errors?.required">
+                                                     Email is required</p>
+                                            </div>
+
+                                    </div>
+                                    <div>
+                                        <label for="password"
+                                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
+                                            password</label>
+                                        <input type="password" name="password" [formControlName]="'password'" id="password" placeholder="••••••••"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                            <div class="pt-2 text-red-500 text-xs" *ngIf="formGet?.password?.errors && formGet?.password?.touched">
+                                                <p class="mt-2 text-sm text-red-600 dark:text-red-500" *ngIf="formGet?.password?.errors?.required">
+                                                     Password is required</p>
+                                            </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="flex items-start">
+                                            <div class="flex items-center h-5">
+                                                <input id="remember" type="checkbox" value=""
+                                                    class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
+                                                    required>
+                                            </div>
+                                            <label for="remember"
+                                                class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember
+                                                me</label>
+                                        </div>
+                                        <a href="#"
+                                            class="ms-auto text-sm text-blue-700 hover:underline dark:text-blue-500">Lost
+                                            Password?</a>
+                                    </div>
+                                    <button type="submit"
+                                        class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" [disabled]="!signInForm.valid">Login
+                                        to your account</button>
+                                    <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
+                                        Not registered? <a
+                                            class="text-blue-700 hover:underline dark:text-blue-500" [routerLink]="['/traveler/sign-up']">Create account</a>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

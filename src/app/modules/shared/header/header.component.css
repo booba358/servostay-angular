@@ -1,0 +1,8 @@
+.bg-lightseagreen{
+    --tw-bg-opacity: 1;
+    background-color: lightseagreen;
+}
+.md\:bg-white {
+    --tw-bg-opacity: 1;
+    background-color: unset;
+}
